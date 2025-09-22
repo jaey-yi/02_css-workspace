@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test</title>
+  <style>
+    * {box-sizing: border-box;}
+    body,*{margin:0;}
+    div{
+      border: 0.1px solid #aaa;
+    }
+    .app{
+      width:100vw; /* vw: 반응형웹 veiw 의 몇 퍼센트*/
+      min-height: 100vh; /*최소 높이 설정*/
+      display: flex;
+      flex-direction: column; /*수직 정렬*/
+    }
+    .header,.footer{
+      background-color: #222;
+      color: white;
+      padding: 16px; /*padding: 여백 */
+      height: 50px; 
+    }
+    .content{
+      flex:1;
+      background-color: #fafafa;
+      display: flex;
+      padding: 5px;
+      gap: 5px;
+    }
+    .aside,.nav{
+      width: 200px;
+      padding: 12px;
+      background-color: #f9fafb;
+
+      
+    }
+    .main{
+      flex:1; /*가로 길이 화면 남는부분 차지*/
+      padding: 16px;
+      background-color: white;
+    }
+    .class>*{
+      border: 1px solid #e5e7eb;
+    }
+    .box2{
+      background-color: rgb(173, 204, 216);
+      border: 1px dashed rgb(17, 112, 150);
+      margin: 12px 0px;
+      padding: 12px;
+    }
+    .nav ul{
+      padding-left: 18px; 
+      margin-top: 8px;
+    }
+    .aside p{
+      margin-top: 8px;
+    }
+    @media (max-width: 760px){
+      .content{
+        flex-direction: column;
+      }
+    }
+  </style>
+  <!--
+  * <div></div>
+  1) 영역을 표현하는 태그
+  2) 블럭요소
+-->
+
+<!--
+  * <span></span>
+  1) 영역을 표현하는 태그
+  2) 인라인 요소(앞 뒤 줄바꿈 x, 요소만 영역)
+-->
+</head>
+<body>
+  <div class="app">
+    <div class="header">
+      머리부(Header)
+    </div>
+    <div class="content">
+     <nav class="nav">
+      <strong>네비게이션(Nav)</strong>
+      <ul>
+       <li>home</li>
+       <li>about</li>
+       <li>contact</li>
+      </ul>
+     </nav>
+     <main class="main">
+          <h1>메인 콘텐츠(Main)</h1>
+          <div class="box2"> 양옆은 고정폭, 가운데는 가변폭</div>
+          <p>Hint 가운데 영역은 <code>flex:1</code>로 남는 공간을 차지 합니다.</p>
+     </main>
+     <aside class="aside">
+       <strong>사이드바(Aside)</strong>
+       <p>공지/광고/프로필 등</p>
+     </aside>
+     </div>
+  <footer class="footer">
+    바닥부(Footer)
+  </footer>
+  </div>
+</body>
+</html>
