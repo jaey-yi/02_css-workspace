@@ -4,12 +4,72 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    *{
+      box-sizing: border-box;}
+    body{margin: 0;}
+    div{border: 0.1px solid rgb(119, 115, 115);}
+    .app{
+      width: 100vw;
+      min-height: 100vh;
+      display:flex ;
+      flex-direction: column;
+    }
+    .header, .footer{
+      background-color: black;
+      color: white;
+      padding: 8px;
+      height: 50px;
+    }
+    .content{
+      display: grid;
+      flex: 1;
+      grid-template-columns: 200px 1fr 200px;
+      padding: 5px;
+      gap: 5px;
+      background-color: #f9fafb; 
+    }
+    .main{
+      display: grid;
+      grid-template-rows: 100px 80px 1fr;
+      padding: 3px;
+    }
+    .box2{
+      background-color: lightblue;
+      border:1px dashed rgba(45, 137, 241, 0.637);
+      margin: 3px 0px;
+    }
+    .nav ul, .aside p{
+      padding-left: 18px;      
+    }
+  </style>
 </head>
 <body>
   <div class="app">
-    <header></header>
-    <content></content>
-    <footer></footer>
+    <header class="header" >
+     머리부(header)
+    </header>
+    <div class="content" >
+      <nav class="nav">
+        <strong>네비게이션(Nav)</strong>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+      <main class="main">
+        <div class="box1"><h1>메인 콘텐츠(Main)</h1></div>
+        <div class="box2"><p>양옆은 고정폭 가운데는 가변폭!</p></div>
+        <div class="box3">Hint 가운데 영역은 <code>flex:1</code>로 남는 공간을 차지합니다.</div>
+      </main>
+      <aside class="aside"><strong>사이드바(Aside)</strong></aside>
+
+     
+    </div>
+    <footer class="footer">
+      바닥부(footer)
+    </footer>
   </div>
 </body>
 </html>

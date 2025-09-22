@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
 </head>
 <body>
   <style>
@@ -32,8 +35,169 @@
     <span>css</span>
     <p>디자인을 입힙니다.</p>
   </div>
+   <hr>
+
+  <style>
+    #p1{
+     font-style: italic; 
+     color: lightgray;
+     font-size: 1em;
+    }
+    #p2{
+       font-style: italic;
+       font-family: Arial;
+
+    }
+    
+    #p3{
+      font-size: 2em;
+      color: lightblue;
+      font-style: italic;
+      font-family: Gowun Dodum;
+    }
+  </style>
+ 
+
+  <div>
+    <h1>웹 타이포그래피의 기초</h1>
+    <p id="p1">작성자: 김글꼴</p>
+    <p id="p2">font-family: "primary Font", "Fallback Font", generic-family</p>
+    <p id="p3">"좋은 타이포그래피는 읽히지 않는다. 좋은 타이포그래피는 기억된다."</p>
+  </div>
+  <hr>
+
+  <style>
+    .calender{
+      margin: 0 auto;
+      font-weight: bold;
+      display: grid;
+      grid-template-columns: repeat(7,1fr);
+    }
+    .calender>*{
+      display: flex;
+      border: 1px solid #aaa;
+      display: flex; 
+    }
+    .calender>*:hover{
+      background-color: bisque;
+    }
+    .calender>.header{
+      height: 70px;
+      align-items: center;
+      justify-content: center;
+      height: 70px;
+    }
+    .calender>.day{
+      padding: 12px;
+      height: 100px;
+    }
+    .calender>.pre-month{
+      color: #aaa;
+    }
+
+    /*.week{
+      display: grid;
+      grid-template-columns: repeat(7, 100px);
+      align-items: center;
+      grid-template-rows: 120px;
+      
+    }
+    .week>*{
+      display: flex;
+      border: 1px solid #aaa;
+      align-items: center;
+      justify-content: center;
+      height: 70px;
+    }
+    .date{
+      display: grid;
+      grid-template-columns: repeat(7,1fr);
+      align-items: center;
+      
+      
+    }
+    */
+
+  </style>
+  <div class="calender">
+    <div class="header sun" style="color: red;">sun</div>
+    <div class="header mon" >mon</div>
+    <div class="header tue">tue</div>
+    <div class="header wed">wed</div>
+    <div class="header thu">thu</div>
+    <div class="header fri">fri</div>
+    <div class="header sat" style="color: blue;">sat</div>
+    <div class="day pre-month">28</div>
+    <div class="day pre-month">29</div>
+    <div class="day pre-month">30</div>
+    <div class="day pre-month">31</div>
+    <div class="day current">1</div>
+    <div class="day current">2</div>
+    <div class="day current">3</div>
+    <div class="day current">4</div>
+    <div class="day current">5</div>
+    <div class="day current">6</div>
+    <div class="day current">7</div>
+    <div class="day current">8</div>
+    <div class="day current">9</div>
+    <div class="day current">10</div>
+    <div class="day current">11</div>
+    <div class="day current">12</div>
+    <div class="day current">13</div>
+    <div class="day current">14</div>
+    <div class="day current">15</div>
+    <div class="day current">16</div>
+    <div class="day current">17</div>
+    <div class="day current">18</div>
+    <div class="day current">19</div>
+    <div class="day current">20</div>
+    <div class="day current">21</div>
+    <div class="day current">22</div>
+    <div class="day current">23</div>
+    <div class="day current">24</div>
+    <div class="day current">25</div>
+    <div class="day current">26</div>
+    <div class="day current">27</div>
+    <div class="day current">28</div>
+    <div class="day current">29</div>
+    <div class="day current">30</div>
+    <div class="day current">31</div>
+    </div>
+  </div>
+  <hr>
+  <style>
+    .profile-card{
+      padding: 0px;
+      width: 1000px;
+      height: 1000px;
+      border: 1px solid black;
+      border-radius: 2em;
+      overflow: hidden;
+    }
+    .card-header{
+      height: 200px;
+      background-color: aquamarine;
+    }
+    .profile-picture{
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+  </style>
+   <div class="profile-card">
+    <div class="card-header"></div>
+    <div class="profile-picture">
+      <img src="../assets/images/cat.png" alt="고양이 사진 입니다">
+    </div>
+    <div class="profile-info">
+      <p><h4>고양이</h4></p>
+      <p>야옹</p>
+      <p>정말 귀엽습니다.</p>
+    </div>
 
 
+   </div>
+  
 
 </body>
 </html>
