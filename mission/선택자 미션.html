@@ -168,23 +168,39 @@
   <style>
     .profile-card{
       padding: 0px;
-      width: 1000px;
+      width: 800px;
       height: 1000px;
       border: 1px solid lightgray;
       border-radius: 2em;
       overflow: hidden;
       position: relative;
+
     }
     .card-header{
       height: 300px;
       background-color: aquamarine;
+      position: relative;
     }
     .profile-card .profile-picture > img{
+      box-sizing: border-box;
 
-      width: 50%;
-      height: 30%;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
+
+      position: absolute;
+      bottom: 50%;
+      top: 150px;
+      left: 50%;
+      transform: translate(-50%, 25%);
+
+      border: 10px solid white;
+
     }
+    .profile-info {
+    text-align: center;
+    padding: 180px 30px 30px; /* 위쪽 여백 늘림 */
+}
   </style>
    <div class="profile-card">
     <div class="card-header"></div>
@@ -192,7 +208,7 @@
       <img src="../assets/images/cat.png" alt="고양이 사진 입니다">
     </div>
     <div class="profile-info">
-      <p><h4>고양이</h4></p>
+      <h4>고양이</h4>
       <p>야옹</p>
       <p>정말 귀엽습니다.</p>
     </div>
